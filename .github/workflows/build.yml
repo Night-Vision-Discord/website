@@ -2,7 +2,7 @@ name: Build PR
 
 on:
   push:
-    branches: ['main']
+    branches: ['flavor']
 
 jobs:
   build:
