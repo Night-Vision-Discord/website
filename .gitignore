@@ -14,5 +14,6 @@
 /.vscode
 .history
 
+# Generated keys. Never commit these!
 gh-pages
 gh-pages.pub
