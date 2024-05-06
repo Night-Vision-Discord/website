@@ -1,5 +1,6 @@
 body {
   background-color: #040404;
+  color: grey
 }
 
 h1 {
@@ -8,4 +9,8 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.tier-table {
+  background-color: red;
 }
