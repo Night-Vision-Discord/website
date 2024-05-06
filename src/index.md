@@ -5,4 +5,4 @@ title: 'Night Vision Discord'
 ---
 
 # Do a thing
-Have some content
+Have some new content
