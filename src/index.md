@@ -4,4 +4,5 @@ permalink: /
 title: 'Night Vision Discord'
 ---
 
-# Test 4
+# Do a thing
+Have some content
