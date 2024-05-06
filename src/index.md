@@ -4,4 +4,4 @@ permalink: /
 title: 'Night Vision Discord'
 ---
 
-# Hola Medium!
+# Test page!
