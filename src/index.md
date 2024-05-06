@@ -8,8 +8,10 @@ title: 'Night Vision Discord'
 Have some new content
 
 ## Tier List
-| S | Item Item Item |
-| A | Thing Thing |
-| B | Another |
-| C | Not Empty |
-| F | |
+| Tier | Entries        |
+|:----:|:--------------|
+| S    | Item Item Item |
+| A    | Thing Thing |
+| B    | Another |
+| C    | Not Empty |
+| F    |     |
