@@ -1,7 +1,7 @@
 ---
 layout: 'base.njk'
 permalink: /
-title: 'Our Eleventy page'
+title: 'Night Vision Discord'
 ---
 
 # Hola Medium!
