@@ -4,4 +4,4 @@ permalink: /
 title: 'Night Vision Discord'
 ---
 
-# Test page!
+# Front page!
