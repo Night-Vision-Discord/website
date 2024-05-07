@@ -8,6 +8,10 @@ title: 'Night Vision Discord'
 Have some new content
 
 ## Tier List
+{% TierTable %}
+{% TierTableRow "s" %}Something{% endTierTableRow %}
+{% endTierTable %}
+
 | Tier | Entries        |
 |:----:|:--------------|
 | S    | Item Item Item |
