@@ -15,7 +15,7 @@ function tierTableRow(content, rowType){
     if (!['s', 'a', 'b', 'c', 'd', 'f'].includes(rowType)){
         return "ERROR - Bad rowType - not one of s, a, b, c, d, f";
     }
-    return '<tr class="tier-table-row label-container"><td class="tier-' + rowType + '">' + rowType + '</td><td class="content">' + content + '</td></tr>'
+    return '<tr class="tier-table-row"><td class="label-container tier-' + rowType + '">' + rowType + '</td><td class="content">' + content + '</td></tr>'
 }
 
 module.exports = function (eleventyConfig) {
