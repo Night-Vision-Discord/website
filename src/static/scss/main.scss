@@ -25,35 +25,39 @@ h1, h2, h3, h4 {
   border: 2px solid black;
 }
 
-.tier-table-row {
+.label-container {
   text-transform: capitalize;
+  text-align: center;
   color: black;
+  width: 12em;
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
-.tier-table-row .tier-s {
+.tier-s {
   background-color: rgb(255, 127, 127);
 }
 
-.tier-table-row .tier-a {
+.tier-a {
   background-color: rgb(255, 191, 127);
 }
 
-.tier-table-row .tier-b {
+.tier-b {
   background-color: rgb(255, 223, 127);;
 }
 
-.tier-table-row .tier-c {
+.tier-c {
   background-color: rgb(255, 255, 127);
 }
 
-.tier-table-row .tier-d {
+.tier-d {
   background-color: rgb(191, 255, 127);
 }
 
-.tier-table-row .tier-f {
+.tier-f {
  background-color: rgb(74, 139, 78);
 }
 
-.tier-table-row .content {
+.content {
   color: ghostwhite;
 }
