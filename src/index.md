@@ -9,13 +9,5 @@ Have some new content
 
 ## Tier List
 {% TierTable %}
-{% TierTableRow "s" %}Something{% endTierTableRow %}
+{% TierTableRow "s" %} Something {% endTierTableRow %}
 {% endTierTable %}
-
-| Tier | Entries        |
-|:----:|:--------------|
-| S    | Item Item Item |
-| A    | Thing Thing |
-| B    | Another |
-| C    | Not Empty |
-| F    |     |
