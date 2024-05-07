@@ -25,9 +25,11 @@ h1, h2, h3, h4 {
   border: 2px solid black;
 }
 
-.tier-table-row {
+.label-container {
   text-transform: capitalize;
+  text-align: center;
   color: black;
+  width: 12em;
 }
 
 .tier-table-row .tier-s {
