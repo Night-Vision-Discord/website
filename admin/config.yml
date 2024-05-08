@@ -17,8 +17,13 @@ slug:
   clean_accents: true
 collections:
   - name: posts
-    folder: "posts"
+    label: "posts"
+    folder: "src"
     create: true
     extension: "md"
     slug: "{{slug}}"
+    identifier_field: name
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
