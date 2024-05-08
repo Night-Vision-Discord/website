@@ -32,28 +32,30 @@ h1, h2, h3, h4 {
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
-    text-indent: 1em;
+    text-indent: 15px;
 }
 
+th {
+  padding: 10px;
+  text-align: left;
+  background-color: rgb(102, 133, 62);
+  color: white;
+}
 tr {
   background-color: rgb(49, 60, 49);
+  color: ghostwhite;
 }
 tr:nth-child(even) { 
   background-color: rgb(59, 70, 59);
 }
 tr:hover {
-  background-color: rgb(139, 180, 86);
+  background-color: rgb(69, 80, 69);
+}
+td {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: left;
-  background-color: rgb(102, 133, 62);
-  color: white;
-}
 
 .tier-table {
   border: 1px solid black; 
