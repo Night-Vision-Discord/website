@@ -29,6 +29,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPairedShortcode("TierTable", tierTable);
     eleventyConfig.addPairedShortcode("TierTableRow", tierTableRow);
 
+    eleventyConfig.addPassthroughCopy("admin");
+
     return {
         dir: {
             input: 'src',
