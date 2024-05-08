@@ -31,8 +31,18 @@ h1, h2, h3, h4 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-weight: bold;
+    font-weight: 700;
     text-indent: 15px;
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 16px;
 }
 
 th {
