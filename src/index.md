@@ -41,6 +41,11 @@ So, that's the a table.
 Monospaced, code type blocks
 ```
 
+## Footnotes
+Footnote 1 link[^first]
+
+[^first]: Footnotes can also **have markup**
+
 ## Tables
 | Heading 1 | Heading 2 |
 |-----------|-----------|
@@ -64,8 +69,3 @@ Aligning the columns
 ## Superscript/Subscript
 - 19 ^th^
 - H~2~O
-
-## Footnotes
-Footnote 1 link[^first]
-
-[^first]: Footnotes can also **have markup**
