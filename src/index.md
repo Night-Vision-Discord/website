@@ -34,6 +34,8 @@ So, that's the a table.
 1. Second item in the list
 1. Just keep going, it'll number for you
 
+### And...
+
 42. Or just start somewhere else, by specifying the start
 1. And it'll keep going for you.
 
