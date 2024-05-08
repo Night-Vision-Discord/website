@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #040404;
   color: grey;
-
+  padding: 1em;
 }
 img, picture, video, canvas, svg {
   display: block;
@@ -32,12 +32,11 @@ h1, h2, h3, h4 {
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
+    text-indent: 1.5em;
 }
 
 .tier-table {
   border: 1px solid black; 
-  margin-top: 2em;
-  margin-bottom: 2em;
   background-color: rgb(26, 26, 23);
   color: grey;
   margin: auto;

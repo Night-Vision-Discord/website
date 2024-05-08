@@ -21,6 +21,9 @@
   "dependencies": {
     "@11ty/eleventy": "2.0.1",
     "markdown-it-attrs": "^4.1.6",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
     "sass": "1.76.0"
   }
 }

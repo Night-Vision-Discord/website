@@ -1,5 +1,8 @@
 const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
+const markdownItFootnote = require('markdown-it-footnote');
+const markdownItSup = require('markdown-it-sup');
+const markdownItSub = require('markdown-it-sub');
 
 const markdownItOptions = {
     html: true,
@@ -23,7 +26,11 @@ module.exports = function (eleventyConfig) {
         files: './public/static/**/*.css',
     });
 
-    const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
+    const markdownLib = markdownIt(markdownItOptions)
+        .use(markdownItAttrs)
+        .use(markdownItFootnote)
+        .use(markdownItSup)
+        .use(markdownItSub);
     eleventyConfig.setLibrary('md', markdownLib);
 
     eleventyConfig.addPairedShortcode("TierTable", tierTable);
