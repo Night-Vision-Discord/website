@@ -36,7 +36,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPairedShortcode("TierTable", tierTable);
     eleventyConfig.addPairedShortcode("TierTableRow", tierTableRow);
 
-    eleventyConfig.addPassthroughCopy("images");
+    eleventyConfig.addPassthroughCopy("src/images");
 
     return {
         dir: {
