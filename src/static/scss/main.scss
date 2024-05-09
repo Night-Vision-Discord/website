@@ -33,7 +33,18 @@ h1, h2, h3, h4 {
     color: transparent;
     font-weight: 700;
     text-indent: 15px;
+    text-decoration: underline;
     color: #00aa00
+}
+h1:before, h2:before, h3:before, h4:before {
+  tecxt-decoration: underline;
+  position: absolute;
+  left: 0;
+  top: 1.2em;
+  height: 0;
+  width: 50px;
+  content: '';
+  border-top: 1px solid #00aa00;
 }
 
 h1 {
