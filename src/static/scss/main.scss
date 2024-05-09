@@ -38,7 +38,7 @@ h1, h2, h3, h4 {
 }
 h1:before, h2:before, h3:before, h4:before {
   content: '\0000a0\0000a0\0000a0';
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 h1 {
