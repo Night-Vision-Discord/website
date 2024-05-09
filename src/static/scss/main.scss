@@ -39,7 +39,7 @@ h1, h2, h3, h4 {
 }
 h1:before, h2:before, h3:before, h4:before {
   content: '\0000a0\0000a0\0000a0';
-  color: #00aa00;
+  color: rgba(00, 170, 00, 0.5);;
   text-decoration: underline;
 }
 
