@@ -117,3 +117,14 @@ td {
   color: ghostwhite;
   background-color: rgb(26, 26, 23);
 }
+
+link {
+  color: rgb(00, 170, 00);
+  text-decoration: underline;
+}
+
+link:hover {
+  color: rgb(00, 170, 00);
+  background-color: rgba(00, 70, 00, 0.4);
+  text-decoration: underline;
+}
