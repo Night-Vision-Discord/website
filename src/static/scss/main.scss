@@ -26,11 +26,14 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4 {
-    font-weight: 800;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
     text-decoration: underline;
+    font-style: normal;
     color: rgba(00, 170, 00, 0.8);
     position: relative;
     margin-top: 14px;
+    text-align: center;
 }
 h1:before, h2:before, h3:before, h4:before {
   content: '\0000a0\0000a0\0000a0';
