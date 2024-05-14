@@ -10,12 +10,12 @@
   Big-ass heading goes here.
   </header>
    <div id="mainwrapper">
-    <div id=navsidebar">
+    <nav id=navsidebar">
      {% block navbar %} {{ navcontent | safe }}{% endblock %}
-    </div>
-    <div id="maincontent">
+    </nav>
+    <main id="maincontent">
     {% block content %}{{ content | safe }}{% endblock %}
-    </div>
+    </main>
    </div>
    <footer>
    Footer goes here.
