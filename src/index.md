@@ -2,7 +2,7 @@
 permalink: /
 title: 'Night Vision Discord'
 ---
-{%extends "base.njk" %}
+{% extends "base.njk" %}
 
 {% block "navbar" %}
 <ul>
@@ -10,6 +10,7 @@ title: 'Night Vision Discord'
 </ul>
 {% endblock %}
 
+{% block "content" %}
 # Do a thing
 Have some new content
 
@@ -77,3 +78,4 @@ Aligning the columns
 ## Superscript/Subscript
 - 19 ^th^
 - H~2~O
+{% endblock %}
