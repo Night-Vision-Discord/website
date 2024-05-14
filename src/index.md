@@ -1,8 +1,8 @@
 ---
+layout: "base.njk"
 permalink: /
 title: 'Night Vision Discord'
 ---
-{% extends "base.njk" %}
 
 {% block "navbar" %}
 <ul>
