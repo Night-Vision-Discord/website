@@ -4,13 +4,6 @@ permalink: /
 title: 'Night Vision Discord'
 ---
 
-{% block "navbar" %}
-<ul>
- <li>something in the nav div</li>
-</ul>
-{% endblock %}
-
-{% block "content" %}
 # Do a thing
 Have some new content
 
@@ -78,4 +71,3 @@ Aligning the columns
 ## Superscript/Subscript
 - 19 ^th^
 - H~2~O
-{% endblock %}
