@@ -128,23 +128,3 @@ a:hover {
   background-color: rgba(00, 70, 00, 0.4);
   text-decoration: underline;
 }
-
-#mainwrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-#navsidebar, #maincontent {
-  padding: 15px;
-}
-
-#maincontent {
-  width: 75%;
-}
-
-#navsidebar {
-  width: 15%;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
