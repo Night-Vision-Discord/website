@@ -9,6 +9,12 @@ Images go in the src/images directory. Use the example.md to see how to refer to
 
 If you're just editing the pages, you can stop reading now.
 
+## Getting access
+Create a github account, and give the username to rik/a moderator to have you added to the team.
+
+## Giving access
+Click "Settings", "Collaborators and teams" and then click "Add people". Add the user there.
+
 ## Technical details
 It's built with eleventy.js, and GitHub Pages, using GitHub Actions to run the generator.
 There's a pair of shortcodes for TierTable and TierTableRow, for making tier lists.
