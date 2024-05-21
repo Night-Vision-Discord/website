@@ -1,7 +1,7 @@
 ---
 layout: "base.njk"
-permalink: /something-else/
-title: 'Night Vision Discord'
+permalink: {{ title | slugify | log}}
+title: 'Something Else'
 ---
 
 # Just another page
