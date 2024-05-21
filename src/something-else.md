@@ -1,7 +1,7 @@
 ---
 layout: "base.njk"
-permalink: {{ title | slugify | log}}
 title: 'Something Else'
+permalink: {{ title | slugify | log}}
 ---
 
 # Just another page
