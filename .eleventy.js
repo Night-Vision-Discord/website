@@ -21,6 +21,15 @@ function tierTableRow(content, rowType){
     return '<tr class="tier-table-row"><td class="label-container tier-' + rowType + '">' + rowType + '</td><td class="content">' + content + '</td></tr>'
 }
 
+function TierItem(content, itemName){
+    let value='<span id="tier-item-' + itemName + '">';
+    if (content !== undefined && content !== null){
+        value += content;
+    }
+    value += '</span>';
+    return value;
+}
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.setBrowserSyncConfig({
         files: './public/static/**/*.css',
@@ -35,6 +44,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPairedShortcode("TierTable", tierTable);
     eleventyConfig.addPairedShortcode("TierTableRow", tierTableRow);
+    eleventyConfig.addPairedShortcode("TierItem", TierItem);
 
     eleventyConfig.addPassthroughCopy("src/images");
 

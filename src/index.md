@@ -63,6 +63,7 @@ Aligning the columns
 
 ## Links
 [Words to see in the link](http://www.google.com)
+[A link to the another page](something-else)
 
 ## Images
 ![Stormtroopocat](https://night-vision-discord.github.io/website/images/stormtroopocat.jpg)
