@@ -29,7 +29,7 @@ The overview of the workflow is as follows:
 When you want to make changes to the website, you'll need to create a branch. This is a copy of the main branch, and you can make changes to it without affecting the main branch. You can create a branch by clicking the "Branch" button in the top right of the Github website, and then typing in a name for the branch.
 
 ## Making changes
-Once you've created a branch, you can make changes to it. You can edit the files in the `src` directory, and then push the changes to the remote repository.
+Once you've created a branch, you can make changes to it. You can edit the .md files in the `src` directory, and then push the changes to the remote repository.
 
 ## Submitting a pull request
 When you're ready to submit your changes, you can submit a pull request. A pull request is a request to merge your changes into the main branch. You can submit a pull request by clicking the "New pull request" button in the top right of the Github website, and then clicking the "Create pull request" button.
@@ -39,6 +39,10 @@ Once you've submitted a pull request, another person will review your changes. W
 
 # Okay, that's a lot of words. How do I actually do it?
 One way is to use the Github website, and the instructions above. Another way is to clone the repository to your local machine, and make the changes there. You would need to remember to pull the changes from the remote repository before starting to work, and push the changes to the remote repository when you're done. Since you're editing on your local machine you can use any text editor that you like - markdown is just plain text - but choosing one that can give you a preview of what you're writing is a good idea. Rik is a nerd, and uses [VS Code](https://code.visualstudio.com/). That said, he also deals with the rest of the code in the repository that builds the website.
+
+Copy the parts of the file from the top of one of the existing files, and paste them into a new file, updating the `title`. It'll generate the permalink from the title, so that it doesn't have to be manually updated. Use the Markdown reference to do the layout that you want.
+
+If you need changes to the page template, speak to Rik.
 
 ## Installing Git
 If you don't already have Git installed on your computer, you can download it from [here](https://git-scm.com/downloads). Once you've downloaded it, you can install it by running the installer.
