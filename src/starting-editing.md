@@ -1,4 +1,4 @@
- ---
+---
 layout: "base.njk"
 title: 'Starting Editing'
 permalink: "/{{ title | slugify }}/"
