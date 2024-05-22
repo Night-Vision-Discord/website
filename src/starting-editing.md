@@ -73,3 +73,6 @@ Use:
 git pull
 ```
 to pull the changes from the remote repository.
+
+## Where can I read more about git?
+[The official git documentation](https://git-scm.com/docs/git-tutorial), and [GitHub's documentation on git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git).
