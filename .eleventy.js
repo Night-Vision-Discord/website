@@ -52,7 +52,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/images");
 
     return {
-        pathPrefix: "/website/",
+        pathPrefix: "/website",
         dir: {
             input: 'src',
             output: 'public',
