@@ -1,0 +1,58 @@
+<hr>
+<h2>layout: &quot;base.njk&quot;<br>
+title: 'Starting Editing'<br>
+permalink: &quot;/undefined/&quot;</h2>
+<h1>Overview</h1>
+<p>This repository contains a website generator, and content that the generator runs on to make the website. When the website is generated it is hosted on Github Pages.</p>
+<h2>What is GitHub?</h2>
+<p>GitHub is a website that allows you to host your own respositories, for collaborative work. It provides several useful functions that can interact with these repositories, some of which are important for this project. When the repository is updated, an Action builds the website, and pushes it to Github Pages, which hosts the website.</p>
+<h2>What is a Git repository?</h2>
+<p>A respository is a collections of files, and their changes. The repository can store several branches, and never throws away information. If you want to go back to an old version it's easy enough to grab it from the repository and use it again.</p>
+<h2>How is the content stored?</h2>
+<p>All of the content is stored in .md files. They contain both Markdown, and a a few extra tags that Rik made for custom functionality. They exist in the <code>src</code> directory. These are what we create/edit to make the content. The Markdown is processed by the <a href="https://markdown-it.github.io/">Markdown-it library</a>, and the extra tags are processed by the eleventy library.</p>
+<h2>How do I get access to the repository?</h2>
+<p>Start by creating an account on GitHub, then give your username to rik/a moderator to have you added to the team.</p>
+<h1>Workflow</h1>
+<p>The overview of the workflow is as follows:</p>
+<ul>
+<li>Create a branch</li>
+<li>Make changes to the branch</li>
+<li>Submit a pull request</li>
+<li>Merge the changes</li>
+</ul>
+<h2>Creating a branch</h2>
+<p>When you want to make changes to the website, you'll need to create a branch. This is a copy of the main branch, and you can make changes to it without affecting the main branch. You can create a branch by clicking the &quot;Branch&quot; button in the top right of the Github website, and then typing in a name for the branch.</p>
+<h2>Making changes</h2>
+<p>Once you've created a branch, you can make changes to it. You can edit the files in the <code>src</code> directory, and then push the changes to the remote repository.</p>
+<h2>Submitting a pull request</h2>
+<p>When you're ready to submit your changes, you can submit a pull request. A pull request is a request to merge your changes into the main branch. You can submit a pull request by clicking the &quot;New pull request&quot; button in the top right of the Github website, and then clicking the &quot;Create pull request&quot; button.</p>
+<h2>Marging the changes</h2>
+<p>Once you've submitted a pull request, another person will review your changes. When they're satisfied with the changes, they can merge the changes into the main branch. This will cause the actions to run, and the website to be built.</p>
+<h1>Okay, that's a lot of words. How do I actually do it?</h1>
+<p>One way is to use the Github website, and the instructions above. Another way is to clone the repository to your local machine, and make the changes there. You would need to remember to pull the changes from the remote repository before starting to work, and push the changes to the remote repository when you're done. Since you're editing on your local machine you can use any text editor that you like - markdown is just plain text - but choosing one that can give you a preview of what you're writing is a good idea. Rik is a nerd, and uses <a href="https://code.visualstudio.com/">VS Code</a>. That said, he also deals with the rest of the code in the repository that builds the website.</p>
+<h2>Installing Git</h2>
+<p>If you don't already have Git installed on your computer, you can download it from <a href="https://git-scm.com/downloads">here</a>. Once you've downloaded it, you can install it by running the installer.</p>
+<h2>Cloning the repository</h2>
+<p>To clone the repository, you can use the following command:</p>
+<pre><code>git clone https://github.com/Night-Vision-Discord/website.git
+</code></pre>
+<p>This will create a new directory called <code>website</code> in your current directory, and then clone the repository into that directory.</p>
+<h2>Making a branch</h2>
+<p>Use:</p>
+<pre><code>git checkout -b &lt;branch-name&gt;
+</code></pre>
+<p>to create a new branch. You can then make changes to the files in the <code>src</code> directory, and then commit them to the branch with the following command:</p>
+<pre><code>git commit -m &quot;Your commit message&quot;
+</code></pre>
+<h2>Pushing the changes in the new branch to the remote repository</h2>
+<p>Use:</p>
+<pre><code>git push origin &lt;branch-name&gt;
+</code></pre>
+<p>to push the changes to the remote repository. Use the gitHub website to submit a pull request to have the changes merged into the main branch.</p>
+<h2>Pulling the most recent changes from the remote repository to your local machine</h2>
+<p>Use:</p>
+<pre><code>git pull
+</code></pre>
+<p>to pull the changes from the remote repository.</p>
+<h2>Where can I read more about git?</h2>
+<p><a href="https://git-scm.com/docs/git-tutorial">The official git documentation</a>, and <a href="https://docs.github.com/en/get-started/getting-started-with-git/set-up-git">GitHub's documentation on git</a>.</p>
