@@ -15,7 +15,7 @@
   </header>
    <div id="mainwrapper">
     <nav id=navsidebar">
-     {% block navbar %} {{ navcontent | safe }}{% endblock %}
+     {{ content | toc | safe }}
     </nav>
     <main id="maincontent">
     {% block content %}{{ content | safe }}{% endblock %}
