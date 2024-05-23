@@ -4,7 +4,7 @@ const markdownItFootnote = require('markdown-it-footnote');
 const markdownItSup = require('markdown-it-sup');
 const markdownItSub = require('markdown-it-sub');
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-const tocPlugin = require("eleventy-plugin-toc");
+const tocPlugin = require("@uncenter/eleventy-plugin-toc");
 const anchor = require("markdown-it-anchor");
 
 const markdownItOptions = {
@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setLibrary('md', markdownLib);
 
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-    eleventyConfig.addPlugin(tocPlugin, { tags: ["h2", "h3", "h4"], ul: true, flat: false });
+    eleventyConfig.addPlugin(tocPlugin, { ul: true });
 
     eleventyConfig.addPairedShortcode("TierTable", tierTable);
     eleventyConfig.addPairedShortcode("TierTableRow", tierTableRow);
