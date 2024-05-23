@@ -13,10 +13,9 @@
   <header>
   Big-ass heading goes here.
   </header>
-   <div id="mainwrapper">
-    <nav id=navsidebar">
-     {{ content | toc | safe }}
-    </nav>
+    <div id="mainwrapper">
+      {{ content | toc | safe }}
+    </div>
     <main id="maincontent">
     {% block content %}{{ content | safe }}{% endblock %}
     </main>
