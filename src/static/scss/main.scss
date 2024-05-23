@@ -134,18 +134,18 @@ a:hover {
   text-decoration: underline;
 }
 
-#pagecontainer {
+.pagecontainer {
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 20px;
 }
 
-#tocwrapper {
+.tocwrapper {
   position: sticky;
   top: 0;
 }
 
-#tocheader {
+.tocheader {
   padding: 10px;
   text-decoration: underline;
 }

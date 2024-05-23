@@ -14,13 +14,13 @@
     <header>
     Big-ass heading goes here.
     </header>
-    <div id="pagecontainer">
-      <div id="tocwrapper">
-      <span id="tocheader">Table of Contents</span>
+    <div class="pagecontainer">
+      <div class="tocwrapper">
+      <span class="tocheader">Table of Contents</span>
         {{ content | toc | safe }}
       </div>
-      <div id="mainwrapper">
-        <main id="maincontent">
+      <div class="mainwrapper">
+        <main class="maincontent">
           {% block content %}{{ content | safe }}{% endblock %}
         </main>
       </div>
