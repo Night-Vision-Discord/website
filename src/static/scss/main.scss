@@ -134,6 +134,7 @@ a:hover {
   text-decoration: underline;
 }
 
-#toc ul li {
-  list-style-type: square;
+#pagecontainer {
+  display: flex;
+  gap: 20px;
 }

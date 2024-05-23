@@ -10,18 +10,21 @@
     <title>{{ title }}</title>
   </head>
   <body>
-  <header>
-  Big-ass heading goes here.
-  </header>
-    <div id="mainwrapper">
-      {{ content | toc | safe }}
+    <header>
+    Big-ass heading goes here.
+    </header>
+    <div id="pagecontainer">
+      <div id="tocwrapper">
+        {{ content | toc | safe }}
+      </div>
+      <div id="mainwrapper">
+        <main id="maincontent">
+          {% block content %}{{ content | safe }}{% endblock %}
+        </main>
+      </div>
     </div>
-    <main id="maincontent">
-    {% block content %}{{ content | safe }}{% endblock %}
-    </main>
-   </div>
-   <footer>
-   Footer goes here.
-   </footer>
+    <footer>
+      Footer goes here.
+    </footer>
   </body>
 </html>

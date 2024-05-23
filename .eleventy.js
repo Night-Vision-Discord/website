@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setLibrary('md', markdownLib);
 
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-    eleventyConfig.addPlugin(tocPlugin, { tags: ["h2", "h3", "h4"], ul: true });
+    eleventyConfig.addPlugin(tocPlugin, { tags: ["h2", "h3", "h4"], ul: true, flat: false });
 
     eleventyConfig.addPairedShortcode("TierTable", tierTable);
     eleventyConfig.addPairedShortcode("TierTableRow", tierTableRow);
