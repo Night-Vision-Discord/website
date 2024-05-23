@@ -34,7 +34,7 @@ Once you've created a branch, you can make changes to it. You can edit the .md f
 ## Submitting a pull request
 When you're ready to submit your changes, you can submit a pull request. A pull request is a request to merge your changes into the main branch. You can submit a pull request by clicking the "New pull request" button in the top right of the Github website, and then clicking the "Create pull request" button.
 
-## Marging the changes
+## Merging the changes
 Once you've submitted a pull request, another person will review your changes. When they're satisfied with the changes, they can merge the changes into the main branch. This will cause the actions to run, and the website to be built.
 
 # Okay, that's a lot of words. How do I actually do it?
