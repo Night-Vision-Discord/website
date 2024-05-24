@@ -135,6 +135,23 @@ a:hover {
 }
 
 .pagecontainer {
+  display: block;
+}
+
+.pagecontainer > * {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .pagecontainer {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+  }
+}
+
+/*
+.pagecontainer {
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 20px;
@@ -149,7 +166,7 @@ a:hover {
   padding: 10px;
   text-decoration: underline;
 }
-
+*/
 header {
   font-size: 48px;
   color: rgb(00, 170, 00);
