@@ -54,6 +54,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPairedShortcode("TierItem", TierItem);
 
     eleventyConfig.addPassthroughCopy("src/images");
+    eleventyConfig.addPassthroughCopy("/public/static/**/*.css");
 
     return {
         pathPrefix: "/website",
