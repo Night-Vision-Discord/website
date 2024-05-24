@@ -148,23 +148,6 @@ a:hover {
   }
 }
 
-/*
-.pagecontainer {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 20px;
-}
-
-.tocwrapper {
-  position: sticky;
-  top: 0;
-}
-
-.tocheader {
-  padding: 10px;
-  text-decoration: underline;
-}
-*/
 header {
   font-size: 48px;
   color: rgb(00, 170, 00);
