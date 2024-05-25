@@ -163,6 +163,10 @@ header {
   }
 }
 
+pre {
+  width: 100%;
+}
+
 code {
   overflow: scroll;
 }
