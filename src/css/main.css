@@ -153,13 +153,18 @@ header {
   color: rgb(00, 170, 00);
   font-weight: 400;
   text-align: right;
-  text-decoration: none
+  text-decoration: none;
+  text-wrap: balance;
 }
 
 @media screen and (min-width:768px) {
   header {
       font-size: 48px; /* for desktop */
   }
+}
+
+code {
+  overflow-wrap: break-word;
 }
 
 footer {
