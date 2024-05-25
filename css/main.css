@@ -164,7 +164,7 @@ header {
 }
 
 code {
-  overflow-wrap: break-word;
+  overflow: scroll;
 }
 
 footer {
