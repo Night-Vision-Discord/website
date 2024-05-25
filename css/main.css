@@ -148,6 +148,11 @@ a:hover {
   }
 }
 
+.maincontent {
+  overflow: hidden;
+}
+
+
 header {
   font-size: 18px; /* for mobile */
   color: rgb(00, 170, 00);
@@ -164,7 +169,7 @@ header {
 }
 
 pre {
-  width: 100%;
+  overflow: auto;
 }
 
 code {
