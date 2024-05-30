@@ -1,6 +1,6 @@
 ---
 layout: "base.njk"
-permalink: /
+permalink: /test-everything/
 title: 'Night Vision Discord'
 ---
 
