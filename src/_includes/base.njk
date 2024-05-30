@@ -12,9 +12,7 @@
     <title>{{ title }}</title>
   </head>
   <body>
-    <header>
-    Big-ass heading goes here.
-    </header>
+    <header>{% include "header.njk" %}</header>
     <div class="pagecontainer">
       <div class="tocwrapper">
       <span class="tocheader">Table of Contents</span>
@@ -26,8 +24,6 @@
         </main>
       </div>
     </div>
-    <footer>
-   Come chat and learn on the Night Vision Discord (link goes here)
-    </footer>
+    <footer>{% include "footer.njk" %}</footer>
   </body>
 </html>
