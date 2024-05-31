@@ -5,17 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:sass": "sass src/static/scss:public/static/css --watch",
-    "build:sass": "sass src/static/scss:public/static/css",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "ELEVENTY_ENV=development eleventy",
     "build:eleventy:windows": "set ELEVENTY_ENV=development&&eleventy",
-    "start:windows": "set ELEVENTY_ENV=development&&npm run watch:eleventy & npm run watch:sass",
-    "start": "npm run watch:eleventy & npm run watch:sass",
-    "build": "npm run build:eleventy & npm run build:sass",
-    "build:sass:prod": "sass src/static/scss:public/static/css --style compressed",
+    "start:windows": "set ELEVENTY_ENV=development&&set DEBUG=\"Eleventy*\"&&npm run watch:eleventy",
+    "start": "npm run watch:eleventy",
+    "build": "npm run build:eleventy",
     "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
-    "build:prod:old": "npm run build:eleventy:prod & npm run build:sass:prod",
     "build:prod": "npm run build:eleventy:prod"
   },
   "keywords": [],
@@ -28,9 +24,8 @@
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-sub": "^2.0.0",
     "markdown-it-sup": "^2.0.0",
-    "sass": "1.76.0"
+    "markdown-it-anchor": "^9.0.1"
   },
   "devDependencies": {
-    "markdown-it-anchor": "^9.0.1"
   }
 }
