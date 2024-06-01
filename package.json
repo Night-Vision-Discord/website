@@ -11,6 +11,7 @@
     "start:windows": "set ELEVENTY_ENV=development&&set DEBUG=\"Eleventy*\"&&npm run watch:eleventy",
     "start": "npm run watch:eleventy",
     "build": "npm run build:eleventy",
+    "build:windows": "npm run build:eleventy:windows",
     "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
     "build:prod": "npm run build:eleventy:prod"
   },
@@ -20,12 +21,11 @@
   "dependencies": {
     "@11ty/eleventy": "2.0.1",
     "@uncenter/eleventy-plugin-toc": "^1.0.3",
+    "markdown-it-anchor": "^9.0.1",
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-sub": "^2.0.0",
     "markdown-it-sup": "^2.0.0",
-    "markdown-it-anchor": "^9.0.1"
-  },
-  "devDependencies": {
+    "node-html-parser": "^6.1.13"
   }
 }

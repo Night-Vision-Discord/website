@@ -62,12 +62,45 @@ Aligning the columns
 
 
 ## Links
-[Words to see in the link](http://www.google.com)
-[A link to the another page](something-else)
+[Words to see in the link](http://www.google.com/)
+[A link to the another page](/something-else/)
 
 ## Images
 ![Stormtroopocat](https://night-vision-discord.github.io/website/images/stormtroopocat.jpg)
 
+## Callouts
+> [!important] Important Note!
+> This is important.
+
+> [!tip] Tip
+> This is a tip.
+
+> [!info] Info
+> This is an informational message.
+
+> [!danger] Danger
+> This is a dangerous message.
+
+> [!warning] Warning
+> This is a warning message.
+
+> [!success] Success
+> This is a success message.
+
+> [!bug] Bug
+> This is a bug message.
+
+> [!quote] Quote
+> This is a quote.
+
+> [!example] Example
+> This is an example.
+
+> [!note] Note
+> This is a note.
+
+> [!abstract] Abstract
+> This is an abstract.
 
 ## Superscript/Subscript
 - 19 ^th^
