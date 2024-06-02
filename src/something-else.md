@@ -18,41 +18,35 @@ This is a page to demonstrate links. This one goes back to the [front page](/).
 {% TierTableRow "f" %} {% TierItem "size" %}Initial Item{% endTierItem %} {% endTierTableRow %}
 {% endTierTable %}
 
-> [!important]
-> This is a warning.
+> [!important] Important Note!
+> This is important.
 
-> [!tip]
+> [!tip] Tip
 > This is a tip.
 
-> [!info]
+> [!info] Info
 > This is an informational message.
 
-> [!danger]
+> [!danger] Danger
 > This is a dangerous message.
 
-> [!warning]
+> [!warning] Warning
 > This is a warning message.
 
-> [!success]
+> [!success] Success
 > This is a success message.
 
-> [!bug]
+> [!bug] Bug
 > This is a bug message.
 
-> [!quote]
+> [!quote] Quote
 > This is a quote.
 
-> [!example]
+> [!example] Example
 > This is an example.
 
-> [!note]
+> [!note] Note
 > This is a note.
 
-> [!abstract]
+> [!abstract] Abstract
 > This is an abstract.
-
-> [!checklist]
-> - [ ] This is a checklist item.
-> - [ ] This is another checklist item.
-> - [ ] This is yet another checklist item. 
-

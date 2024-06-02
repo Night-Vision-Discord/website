@@ -1,7 +1,7 @@
 ---
 layout: "base.njk"
 title: 'Starting Editing'
-permalink: "/{{ title | slugify }}/"
+permalink: "edititing/{{ title | slugify }}/"
 ---
 ## Overview
 This repository contains a website generator, and content that the generator runs on to make the website. When the website is generated it is hosted on Github Pages.
