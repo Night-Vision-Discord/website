@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/website/css/main.css" media="screen">
+    <link rel="icon" type="image/x-icon" href="/website/images/nvd-favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>
+    // Create callout icons
+    window.addEventListener("load", () => {
+        document.querySelectorAll(".callout").forEach((elem) => {
+            const icon = getComputedStyle(elem).getPropertyValue('--callout-icon');
+            const iconName = icon && icon.trim().replace(/^lucide-/, "");
+
+            if (iconName) {
+                const calloutTitle = elem.querySelector(".callout-title");
+
+                if (calloutTitle) {
+                    const calloutIconContainer = document.createElement("div");
+                    const calloutIcon = document.createElement("i");
+
+                    calloutIconContainer.appendChild(calloutIcon);
+                    calloutIcon.setAttribute("icon-name", iconName);
+                    calloutIconContainer.setAttribute("class", "callout-icon");
+                    calloutTitle.insertBefore(calloutIconContainer, calloutTitle.firstChild);
+                }
+            }
+        });
+
+        lucide.createIcons();
+
+        // Collapse callouts
+        Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((elem) => {
+            elem.querySelector('.callout-title').addEventListener("click", (event) => {
+                if (elem.classList.contains("is-collapsed")) {
+                    elem.classList.remove("is-collapsed");
+                } else {
+                    elem.classList.add("is-collapsed");
+                }
+            });
+        });
+    });
+</script>
+    <title>Starting Editing</title>
+  </head>
+  <body>
+    <header>Nicer-looking header goes here</header>
+    <div class="pagecontainer">
+      <div class="tocwrapper">
+      <span class="tocheader">Table of Contents</span>
+        <nav class="toc"><ul><li><a href="#overview">Overview</a><ul><li><a href="#what-is-git%3F">What is git?</a></li>
+<li><a href="#documentation-format">Documentation Format</a></li>
+<li><a href="#editors">Editors</a></li></ul></li>
+<li><a href="#local-preview">Local Preview</a></li></ul></nav>
+      </div>
+      <div class="mainwrapper">
+        <main class="maincontent">
+          <h2 id="overview" tabindex="-1">Overview</h2>
+<p>This website generator works by taking Markdown files, and turning them into HTML, while also inserting them into a template. This section of the website contains the documentation for how this is put together. All of the website (and the generator) is stored in a <code>git</code> repository. Unfortunately, this means that you're going to have to understand the basics of how to use <code>git</code>.</p>
+<h3 id="what-is-git%3F" tabindex="-1">What is <code>git</code>?</h3>
+<p><a href="https://git-scm.com/">Git</a> is a version control system. You can create a branch from the <code>main</code> branch, edit and create files in the branch, and then use a pull request to have someone merge those changes into the <code>main</code> branch. Having someone else review the changes helps with the review process for catching typos and bad information. You can create new branches right on the github website, but you can also install <code>git</code> on your own computer and use it to clone the repository, pushing and pulling changes. This makes it much easier to work locally, rather than depending on a good internet connection all the time.</p>
+<h3 id="documentation-format" tabindex="-1">Documentation Format</h3>
+<p>It's Markdown, processed by <a href="https://github.com/markdown-it/markdown-it">Markdown-it</a>, along with a couple of extras that has been added custom. You can see everything in the <a href="/website/test-everything/">test of everything</a> page.</p>
+<h3 id="editors" tabindex="-1">Editors</h3>
+<p>I'm using <a href="https://code.visualstudio.com/">VS Code</a> for editing the website. It is meant mostly for writing code, so it also has features for dealing with git, which makes our workflow easier. Live preview is a great geature to have, but if you want to install a couple of extra things, you can make a local preview, to see that everything is working as expected.</p>
+<h2 id="local-preview" tabindex="-1">Local Preview</h2>
+<p>If you want to generate your own local previews to test what you're working on, you need to install Node.js and npm. You can find instructions for doing that <a href="https://nodejs.org/en/download/">here</a>. Use a prebuilt installer for the easiest install. If it's installed right you should be able to run <code>node -v</code> and <code>npm -v</code> in your terminal to see that it's working.</p>
+<p>Once you have <code>npm</code> working, in the top level of the repository, run <code>npm install</code> to install the code that the website generator uses into a directory called <code>node_modules</code>. You can then run <code>npm watch:eleventy</code>, which will run a local server that will watch for changes to the files in the <code>src</code> directory, and automatically regenerate the website. You can open your browser to <a href="http://localhost:8080">http://localhost:8080</a> to see the local preview. It should automatically refresh when you make changes to the files. The <code>node_modules</code> directory is not tracked by git, so you can safely delete it if you want to start over, and you don't need to worry about accidentally committing it and sending it to the server. A side note is that you're just copying what the website build process does, so if it works for you, it'll work for the builder.</p>
+
+        </main>
+      </div>
+    </div>
+    <footer>Come chat and learn on the Night Vision Discord (link goes here)</footer>
+  </body>
+</html>

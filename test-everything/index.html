@@ -9,6 +9,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/website/css/main.css" media="screen">
     <link rel="icon" type="image/x-icon" href="/website/images/nvd-favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>
+    // Create callout icons
+    window.addEventListener("load", () => {
+        document.querySelectorAll(".callout").forEach((elem) => {
+            const icon = getComputedStyle(elem).getPropertyValue('--callout-icon');
+            const iconName = icon && icon.trim().replace(/^lucide-/, "");
+
+            if (iconName) {
+                const calloutTitle = elem.querySelector(".callout-title");
+
+                if (calloutTitle) {
+                    const calloutIconContainer = document.createElement("div");
+                    const calloutIcon = document.createElement("i");
+
+                    calloutIconContainer.appendChild(calloutIcon);
+                    calloutIcon.setAttribute("icon-name", iconName);
+                    calloutIconContainer.setAttribute("class", "callout-icon");
+                    calloutTitle.insertBefore(calloutIconContainer, calloutTitle.firstChild);
+                }
+            }
+        });
+
+        lucide.createIcons();
+
+        // Collapse callouts
+        Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((elem) => {
+            elem.querySelector('.callout-title').addEventListener("click", (event) => {
+                if (elem.classList.contains("is-collapsed")) {
+                    elem.classList.remove("is-collapsed");
+                } else {
+                    elem.classList.add("is-collapsed");
+                }
+            });
+        });
+    });
+</script>
     <title>Night Vision Discord</title>
   </head>
   <body>
@@ -22,6 +59,7 @@
 <li><a href="#tables">Tables</a></li>
 <li><a href="#links">Links</a></li>
 <li><a href="#images">Images</a></li>
+<li><a href="#callouts">Callouts</a></li>
 <li><a href="#superscript%2Fsubscript">Superscript/Subscript</a></li></ul></nav>
       </div>
       <div class="mainwrapper">
@@ -108,10 +146,66 @@
 </tbody>
 </table>
 <h2 id="links" tabindex="-1">Links</h2>
-<p><a href="http://www.google.com">Words to see in the link</a><br>
-<a href="something-else">A link to the another page</a></p>
+<p><a href="http://www.google.com/">Words to see in the link</a><br>
+<a href="/website/something-else/">A link to the another page</a></p>
 <h2 id="images" tabindex="-1">Images</h2>
 <p><img src="https://night-vision-discord.github.io/website/images/stormtroopocat.jpg" alt="Stormtroopocat"></p>
+<h2 id="callouts" tabindex="-1">Callouts</h2>
+<div class="callout " data-callout="important"><div class="callout-title"><div class="callout-title-inner"> Important Note!<br></div></div>
+<div class="callout-content">
+<p>
+This is important.</p>
+</div></div>
+<div class="callout " data-callout="tip"><div class="callout-title"><div class="callout-title-inner"> Tip<br></div></div>
+<div class="callout-content">
+<p>
+This is a tip.</p>
+</div></div>
+<div class="callout " data-callout="info"><div class="callout-title"><div class="callout-title-inner"> Info<br></div></div>
+<div class="callout-content">
+<p>
+This is an informational message.</p>
+</div></div>
+<div class="callout " data-callout="danger"><div class="callout-title"><div class="callout-title-inner"> Danger<br></div></div>
+<div class="callout-content">
+<p>
+This is a dangerous message.</p>
+</div></div>
+<div class="callout " data-callout="warning"><div class="callout-title"><div class="callout-title-inner"> Warning<br></div></div>
+<div class="callout-content">
+<p>
+This is a warning message.</p>
+</div></div>
+<div class="callout " data-callout="success"><div class="callout-title"><div class="callout-title-inner"> Success<br></div></div>
+<div class="callout-content">
+<p>
+This is a success message.</p>
+</div></div>
+<div class="callout " data-callout="bug"><div class="callout-title"><div class="callout-title-inner"> Bug<br></div></div>
+<div class="callout-content">
+<p>
+This is a bug message.</p>
+</div></div>
+<div class="callout " data-callout="quote"><div class="callout-title"><div class="callout-title-inner"> Quote<br></div></div>
+<div class="callout-content">
+<p>
+This is a quote.</p>
+</div></div>
+<div class="callout " data-callout="example"><div class="callout-title"><div class="callout-title-inner"> Example<br></div></div>
+<div class="callout-content">
+<p>
+This is an example.</p>
+</div></div>
+<div class="callout " data-callout="note"><div class="callout-title"><div class="callout-title-inner"> Note<br></div></div>
+<div class="callout-content">
+<p>
+This is a note.</p>
+</div></div>
+<div class="callout " data-callout="abstract"><div class="callout-title"><div class="callout-title-inner"> Abstract<br></div></div>
+<div class="callout-content">
+<p>
+This is an abstract.</p>
+</div></div>
 <h2 id="superscript%2Fsubscript" tabindex="-1">Superscript/Subscript</h2>
 <ul>
 <li>19 <sup>th</sup></li>
@@ -128,6 +222,6 @@
         </main>
       </div>
     </div>
-    <footer>   Come chat and learn on the Night Vision Discord (link goes here)</footer>
+    <footer>Come chat and learn on the Night Vision Discord (link goes here)</footer>
   </body>
 </html>

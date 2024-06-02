@@ -9,6 +9,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/website/css/main.css" media="screen">
     <link rel="icon" type="image/x-icon" href="/website/images/nvd-favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>
+    // Create callout icons
+    window.addEventListener("load", () => {
+        document.querySelectorAll(".callout").forEach((elem) => {
+            const icon = getComputedStyle(elem).getPropertyValue('--callout-icon');
+            const iconName = icon && icon.trim().replace(/^lucide-/, "");
+
+            if (iconName) {
+                const calloutTitle = elem.querySelector(".callout-title");
+
+                if (calloutTitle) {
+                    const calloutIconContainer = document.createElement("div");
+                    const calloutIcon = document.createElement("i");
+
+                    calloutIconContainer.appendChild(calloutIcon);
+                    calloutIcon.setAttribute("icon-name", iconName);
+                    calloutIconContainer.setAttribute("class", "callout-icon");
+                    calloutTitle.insertBefore(calloutIconContainer, calloutTitle.firstChild);
+                }
+            }
+        });
+
+        lucide.createIcons();
+
+        // Collapse callouts
+        Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((elem) => {
+            elem.querySelector('.callout-title').addEventListener("click", (event) => {
+                if (elem.classList.contains("is-collapsed")) {
+                    elem.classList.remove("is-collapsed");
+                } else {
+                    elem.classList.add("is-collapsed");
+                }
+            });
+        });
+    });
+</script>
     <title>Something Else</title>
   </head>
   <body>
@@ -31,62 +68,65 @@
 <tr class="tier-table-row"><td class="label-container tier-d">d</td><td class="content"> <span id="tier-item-five">Initial Item</span> </td></tr>
 <tr class="tier-table-row"><td class="label-container tier-f">f</td><td class="content"> <span id="tier-item-size">Initial Item</span> </td></tr>
 </table>
-<blockquote>
-<p>[!important]<br>
-This is a warning.</p>
-</blockquote>
-<blockquote>
-<p>[!tip]<br>
+<div class="callout " data-callout="important"><div class="callout-title"><div class="callout-title-inner"> Important Note!<br></div></div>
+<div class="callout-content">
+<p>
+This is important.</p>
+</div></div>
+<div class="callout " data-callout="tip"><div class="callout-title"><div class="callout-title-inner"> Tip<br></div></div>
+<div class="callout-content">
+<p>
 This is a tip.</p>
-</blockquote>
-<blockquote>
-<p>[!info]<br>
+</div></div>
+<div class="callout " data-callout="info"><div class="callout-title"><div class="callout-title-inner"> Info<br></div></div>
+<div class="callout-content">
+<p>
 This is an informational message.</p>
-</blockquote>
-<blockquote>
-<p>[!danger]<br>
+</div></div>
+<div class="callout " data-callout="danger"><div class="callout-title"><div class="callout-title-inner"> Danger<br></div></div>
+<div class="callout-content">
+<p>
 This is a dangerous message.</p>
-</blockquote>
-<blockquote>
-<p>[!warning]<br>
+</div></div>
+<div class="callout " data-callout="warning"><div class="callout-title"><div class="callout-title-inner"> Warning<br></div></div>
+<div class="callout-content">
+<p>
 This is a warning message.</p>
-</blockquote>
-<blockquote>
-<p>[!success]<br>
+</div></div>
+<div class="callout " data-callout="success"><div class="callout-title"><div class="callout-title-inner"> Success<br></div></div>
+<div class="callout-content">
+<p>
 This is a success message.</p>
-</blockquote>
-<blockquote>
-<p>[!bug]<br>
+</div></div>
+<div class="callout " data-callout="bug"><div class="callout-title"><div class="callout-title-inner"> Bug<br></div></div>
+<div class="callout-content">
+<p>
 This is a bug message.</p>
-</blockquote>
-<blockquote>
-<p>[!quote]<br>
+</div></div>
+<div class="callout " data-callout="quote"><div class="callout-title"><div class="callout-title-inner"> Quote<br></div></div>
+<div class="callout-content">
+<p>
 This is a quote.</p>
-</blockquote>
-<blockquote>
-<p>[!example]<br>
+</div></div>
+<div class="callout " data-callout="example"><div class="callout-title"><div class="callout-title-inner"> Example<br></div></div>
+<div class="callout-content">
+<p>
 This is an example.</p>
-</blockquote>
-<blockquote>
-<p>[!note]<br>
+</div></div>
+<div class="callout " data-callout="note"><div class="callout-title"><div class="callout-title-inner"> Note<br></div></div>
+<div class="callout-content">
+<p>
 This is a note.</p>
-</blockquote>
-<blockquote>
-<p>[!abstract]<br>
+</div></div>
+<div class="callout " data-callout="abstract"><div class="callout-title"><div class="callout-title-inner"> Abstract<br></div></div>
+<div class="callout-content">
+<p>
 This is an abstract.</p>
-</blockquote>
-<blockquote>
-<p>[!checklist]</p>
-<ul>
-<li>[ ] This is a checklist item.</li>
-<li>[ ] This is another checklist item.</li>
-<li>[ ] This is yet another checklist item.</li>
-</ul>
-</blockquote>
+</div></div>
 
         </main>
       </div>
     </div>
-    <footer>   Come chat and learn on the Night Vision Discord (link goes here)</footer>
+    <footer>Come chat and learn on the Night Vision Discord (link goes here)</footer>
   </body>
 </html>
