@@ -6,13 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:eleventy": "eleventy --serve",
-    "build:eleventy": "ELEVENTY_ENV=development eleventy",
-    "build:eleventy:windows": "set ELEVENTY_ENV=development&&eleventy",
-    "start:windows": "set ELEVENTY_ENV=development&&set DEBUG=\"Eleventy*\"&&npm run watch:eleventy",
-    "start": "npm run watch:eleventy",
+    "start": "cross-env ELEVENTY_ENV=development DEBUG=\"Eleventy*\" npm run watch:eleventy",
     "build": "npm run build:eleventy",
-    "build:windows": "npm run build:eleventy:windows",
-    "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
+    "build:eleventy": "cross-env ELEVENTY_ENV=development eleventy",
+    "build:eleventy:prod": "cross-env ELEVENTY_ENV=production eleventy",
     "build:prod": "npm run build:eleventy:prod"
   },
   "keywords": [],
@@ -27,5 +24,8 @@
     "markdown-it-sub": "^2.0.0",
     "markdown-it-sup": "^2.0.0",
     "node-html-parser": "^6.1.13"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
