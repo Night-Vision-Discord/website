@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/website/css/main.css" media="screen">
+    <link rel="icon" type="image/x-icon" href="/website/images/nvd-favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>
+    // Create callout icons
+    window.addEventListener("load", () => {
+        document.querySelectorAll(".callout").forEach((elem) => {
+            const icon = getComputedStyle(elem).getPropertyValue('--callout-icon');
+            const iconName = icon && icon.trim().replace(/^lucide-/, "");
+
+            if (iconName) {
+                const calloutTitle = elem.querySelector(".callout-title");
+
+                if (calloutTitle) {
+                    const calloutIconContainer = document.createElement("div");
+                    const calloutIcon = document.createElement("i");
+
+                    calloutIconContainer.appendChild(calloutIcon);
+                    calloutIcon.setAttribute("icon-name", iconName);
+                    calloutIconContainer.setAttribute("class", "callout-icon");
+                    calloutTitle.insertBefore(calloutIconContainer, calloutTitle.firstChild);
+                }
+            }
+        });
+
+        lucide.createIcons();
+
+        // Collapse callouts
+        Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((elem) => {
+            elem.querySelector('.callout-title').addEventListener("click", (event) => {
+                if (elem.classList.contains("is-collapsed")) {
+                    elem.classList.remove("is-collapsed");
+                } else {
+                    elem.classList.add("is-collapsed");
+                }
+            });
+        });
+    });
+</script>
+    <title>Something Else</title>
+  </head>
+  <body>
+    <header>Nicer-looking header goes here</header>
+    <div class="pagecontainer">
+      <div class="tocwrapper">
+      <span class="tocheader">Table of Contents</span>
+        <nav class="toc"><ul><li><a href="#let's-test-the-tier-table-thingy">Let's test the tier table thingy</a></li></ul></nav>
+      </div>
+      <div class="mainwrapper">
+        <main class="maincontent">
+          <h1 id="just-another-page" tabindex="-1">Just another page</h1>
+<p>This is a page to demonstrate links. This one goes back to the <a href="/website/">front page</a>.</p>
+<h2 id="let's-test-the-tier-table-thingy" tabindex="-1">Let's test the tier table thingy</h2>
+<table class="tier-table">
+<tr class="tier-table-row"><td class="label-container tier-s">s</td><td class="content"> <span id="tier-item-one">Initial Item</span> </td></tr>
+<tr class="tier-table-row"><td class="label-container tier-a">a</td><td class="content"> <span id="tier-item-two">Initial Item</span> </td></tr>
+<tr class="tier-table-row"><td class="label-container tier-b">b</td><td class="content"> <span id="tier-item-three">Initial Item</span> </td></tr>
+<tr class="tier-table-row"><td class="label-container tier-c">c</td><td class="content"> <span id="tier-item-four">Initial Item</span> </td></tr>
+<tr class="tier-table-row"><td class="label-container tier-d">d</td><td class="content"> <span id="tier-item-five">Initial Item</span> </td></tr>
+<tr class="tier-table-row"><td class="label-container tier-f">f</td><td class="content"> <span id="tier-item-size">Initial Item</span> </td></tr>
+</table>
+<div class="callout " data-callout="important"><div class="callout-title"><div class="callout-title-inner"> Important Note!<br></div></div>
+<div class="callout-content">
+<p>
+This is important.</p>
+</div></div>
+<div class="callout " data-callout="tip"><div class="callout-title"><div class="callout-title-inner"> Tip<br></div></div>
+<div class="callout-content">
+<p>
+This is a tip.</p>
+</div></div>
+<div class="callout " data-callout="info"><div class="callout-title"><div class="callout-title-inner"> Info<br></div></div>
+<div class="callout-content">
+<p>
+This is an informational message.</p>
+</div></div>
+<div class="callout " data-callout="danger"><div class="callout-title"><div class="callout-title-inner"> Danger<br></div></div>
+<div class="callout-content">
+<p>
+This is a dangerous message.</p>
+</div></div>
+<div class="callout " data-callout="warning"><div class="callout-title"><div class="callout-title-inner"> Warning<br></div></div>
+<div class="callout-content">
+<p>
+This is a warning message.</p>
+</div></div>
+<div class="callout " data-callout="success"><div class="callout-title"><div class="callout-title-inner"> Success<br></div></div>
+<div class="callout-content">
+<p>
+This is a success message.</p>
+</div></div>
+<div class="callout " data-callout="bug"><div class="callout-title"><div class="callout-title-inner"> Bug<br></div></div>
+<div class="callout-content">
+<p>
+This is a bug message.</p>
+</div></div>
+<div class="callout " data-callout="quote"><div class="callout-title"><div class="callout-title-inner"> Quote<br></div></div>
+<div class="callout-content">
+<p>
+This is a quote.</p>
+</div></div>
+<div class="callout " data-callout="example"><div class="callout-title"><div class="callout-title-inner"> Example<br></div></div>
+<div class="callout-content">
+<p>
+This is an example.</p>
+</div></div>
+<div class="callout " data-callout="note"><div class="callout-title"><div class="callout-title-inner"> Note<br></div></div>
+<div class="callout-content">
+<p>
+This is a note.</p>
+</div></div>
+<div class="callout " data-callout="abstract"><div class="callout-title"><div class="callout-title-inner"> Abstract<br></div></div>
+<div class="callout-content">
+<p>
+This is an abstract.</p>
+</div></div>
+
+        </main>
+      </div>
+    </div>
+    <footer>Come chat and learn on the Night Vision Discord (link goes here)</footer>
+  </body>
+</html>

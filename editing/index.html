@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/website/css/main.css" media="screen">
+    <link rel="icon" type="image/x-icon" href="/website/images/nvd-favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>
+    // Create callout icons
+    window.addEventListener("load", () => {
+        document.querySelectorAll(".callout").forEach((elem) => {
+            const icon = getComputedStyle(elem).getPropertyValue('--callout-icon');
+            const iconName = icon && icon.trim().replace(/^lucide-/, "");
+
+            if (iconName) {
+                const calloutTitle = elem.querySelector(".callout-title");
+
+                if (calloutTitle) {
+                    const calloutIconContainer = document.createElement("div");
+                    const calloutIcon = document.createElement("i");
+
+                    calloutIconContainer.appendChild(calloutIcon);
+                    calloutIcon.setAttribute("icon-name", iconName);
+                    calloutIconContainer.setAttribute("class", "callout-icon");
+                    calloutTitle.insertBefore(calloutIconContainer, calloutTitle.firstChild);
+                }
+            }
+        });
+
+        lucide.createIcons();
+
+        // Collapse callouts
+        Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((elem) => {
+            elem.querySelector('.callout-title').addEventListener("click", (event) => {
+                if (elem.classList.contains("is-collapsed")) {
+                    elem.classList.remove("is-collapsed");
+                } else {
+                    elem.classList.add("is-collapsed");
+                }
+            });
+        });
+    });
+</script>
+    <title>Starting Editing</title>
+  </head>
+  <body>
+    <header>Nicer-looking header goes here</header>
+    <div class="pagecontainer">
+      <div class="tocwrapper">
+      <span class="tocheader">Table of Contents</span>
+        <nav class="toc"><ul><li><a href="#overview">Overview</a><ul><li><a href="#markdown">Markdown</a></li>
+<li><a href="#git">Git</a></li>
+<li><a href="#github">GitHub</a></li></ul></li>
+<li><a href="#okay%2C-but%2C-how-do-i-actually-work-on-the-website%3F">Okay, but, how do I actually work on the website?</a></li>
+<li><a href="#local-preview">Local Preview</a></li></ul></nav>
+      </div>
+      <div class="mainwrapper">
+        <main class="maincontent">
+          <h2 id="overview" tabindex="-1">Overview</h2>
+<p>This website is build with a series of layers. Aside from how the content is written, you don't need to understand much of it, but feel free to delve deeper. The layers that you need to know exist are:</p>
+<ul>
+<li>Markdown</li>
+<li>Git</li>
+<li>GitHub</li>
+</ul>
+<h3 id="markdown" tabindex="-1">Markdown</h3>
+<p>Markdown is a lightweight markup language that is used to write content. All the content under the <code>src</code> directory is written in Markdown. You can see the <a href="/website/test-everything/">test of everything</a> page to see what the Markdown looks like, along with the special tags for extra functionality that have been added. Just copy markup from there, or review against the <a href="https://github.com/markdown-it/markdown-it">Markdown-it documentation</a>.</p>
+<h3 id="git" tabindex="-1">Git</h3>
+<p>Git is a version control system. It stores the files, and all the changes that you make to them. This container of files is called a repository. A respository can track multuiple branches of work at the same time. These branches are important, because the one labelled <code>main</code> is the one that is used to deploy the website, and the one labelled <code>gh-pages</code> is where the output of the website generator is stored, and pushed into the hosting service.</p>
+<div class="callout " data-callout="important"><div class="callout-title"><div class="callout-title-inner">Important</div></div>
+<div class="callout-content">
+<p>
+Do not edit things in the <code>main</code> or <code>gh-pages</code> branches. Not even if you clone the repository.</p>
+</div></div>
+<p>To work on the website, make a new branch with a useful name, make your changes, and commit them. Then make a pull request to merge your changes into the <code>main</code> branch. This will also trigger a review of your changes because someone other than you has to approve the merge. Once the review is complete, the changes will be merged into the <code>main</code> branch, and the website will be updated. You can make as many commits to your branch as you want, to avoid losing work for some reason while you're editing. Maybe you change your mind on some wording. Maybe you find a typo, or a new image to add. Since all version are saved forever, you can always pull an old version back out, too, so don't worry about losing anything, or even breaking things.</p>
+<h3 id="github" tabindex="-1">GitHub</h3>
+<p>GitHub is a website that hosts git repositories. It's free. It hosts our git repository, the build process, and the website itself. It's a better experience to clone the repository, and work on a <code>clone</code> of the repository locally. The down side to this is that you need to keep your clone of the repository up to date by <code>pull</code>ing newer changes from the repository in GitHub. When you're done making changes locally, even if you don't want to merge them yet, you can <code>push</code> your branch up to Github. This allows for things like changing which machine you're working from - if you were starting an edit while you were at work on one machine, but it was time to leave and you want to carry on editing at home - or allows someone else to see your porposed changes, give feedback, or help with the editing, all without pushing the changes to the website.</p>
+<h2 id="okay%2C-but%2C-how-do-i-actually-work-on-the-website%3F" tabindex="-1">Okay, but, how do I actually work on the website?</h2>
+<p>The absolute minimum you need to work on the website, is just a web browser - you can do everything via the Github website. It is, however, a pain to do. The setup I use is to install <a href="https://www.git-scm.com/downloads">git</a> and <a href="https://code.visualstudio.com/">Visual Studio Code</a>. This gives you all the tools to work locally, and without needing to do anything else. There's more tools that can make more things easier, but I'll explain why I recommend this.</p>
+<p>First up, make a directory on your computer to store your <code>clone</code> of the repository. Open up a terminal (Command prompt or Powershell, or Terminal if you're on Mac), and go to that directory that you created. In your browser, go to the <a href="https://github.com/Night-Vision-Discord/website">GitHub Repository</a>, and pick the green button labelled &quot;&lt;&gt; Code&quot;, and copy the URL in the &quot;Clone&quot; section. In your terminal run <code>git clone &lt;url&gt;</code>, where <code>&lt;url&gt;</code> is the URL you copied. This will download the repository to your computer. Go into the directory that was created, and run <code>code .</code> to open up Visual Studio Code in the current directory. It will ask you whether you trust the authors of the code, and you can say yes.</p>
+<p>On the left, you'll see a list of files in the repository. At the bottom of the screen you'll see the word &quot;main&quot;. That's the branch that you're currently working on. If you click on it, you can create a new branch to work on or select an existing branch. Go nuts. Make new documents under the <code>src</code> directory, using existing ones as a template. Overwrite existing files. It's all cool, we can back out changes we don't want, later. You can not permanently break it. If you want a limited preview of what your document will look like, you can hit <code>Control + K</code>, followed by <code>v</code>. this will open up a preview window to the right of the editor with a live preview. It's not great, and it has none of our custom parts, but it's a good way to see what your document will look like.</p>
+<p>When you're done editing (or hit a stopping point, or just anywhere you want to save), you need to commit your changes to the respository. To do this, pick the &quot;Source Control&quot; tab on the left (or hit Control+Shift+G), add a commit message in the box, hit the <code>+</code> to stage all the changes that <code>git</code> has detected, and then hit the <code>Commit</code> button. Those changes are now saved to your local copy of the repository in the branch you're working on. You can then <code>push</code> your changes to the server, so that they are saved in the repository on GitHub by hitting the <code>Push</code> button.</p>
+<p>Back at the GitHub website, go to the &quot;Pull Requests&quot; tab, and click the green button labelled &quot;New pull request&quot;. This will open up a new window, where you can select the branch you want to merge into the <code>main</code> branch, and the branch you want to merge from. Hit the green button labelled &quot;Create pull request&quot;, and fill in a few words about what you're doing, and hit the &quot;Create pull request&quot; button. The Pull request is what allows your branch to be merged into the <code>main</code> branch, and from there go onto the website.</p>
+<h2 id="local-preview" tabindex="-1">Local Preview</h2>
+<p>If you want to generate your own local previews to see what your branch actually looks like before submitting a pull request, you need to install <code>Node.js</code> and <code>npm</code>. You can find instructions for doing that <a href="https://nodejs.org/en/download/">here</a>. Use a prebuilt installer for the easiest install. If it's installed right you should be able to run <code>node -v</code> and <code>npm -v</code> in your terminal to see that it's working.</p>
+<p>Once you have <code>npm</code> working, in the top level of the repository, run <code>npm install</code> to install the code that the website generator uses into a directory called <code>node_modules</code>. You can then run <code>npm watch:eleventy</code>, which will run a local server that will watch for changes to the files in the <code>src</code> directory, and automatically regenerate the website. You can open your browser to <a href="http://localhost:8080">http://localhost:8080</a> to see the local preview. It should automatically refresh when you make changes to the files and hit save (separately to committing). The <code>node_modules</code> directory is not tracked by git, so you can safely delete it if you want to start over, and you don't need to worry about accidentally committing it and sending it to the server. The side note here is that what GitHub does is run an <code>command</code> to do a single build of the website, and then pushes the result to the <code>gh-pages</code> branch, which another process on GitHub will use to serve the website, so as long as the local preview works, it'll work when it builds the website.</p>
+
+        </main>
+      </div>
+    </div>
+    <footer>Come chat and learn on the Night Vision Discord (link goes here)</footer>
+  </body>
+</html>
